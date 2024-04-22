@@ -1,45 +1,55 @@
 /* Navigation */
 .nav-container {
-    margin: 0 auto;
-    width: 100%;
-    height: 2em;
-    display: inline-flex;
-    justify-content: center;
-    position: fixed;
+  margin: 0 auto;
+  width: 100%;
+  height: 2em;
+  display: inline-flex;
+  justify-content: center;
+  position: fixed;
 }
 .brand {
-    height: 100px !important;
-    margin-left: auto;
+  height: 100px !important;
+  margin-left: 28px;
 }
 nav {
-    display: flex;
-    align-items: center;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 a {
-    margin-right: 24px;
+  margin-right: 24px;
 }
 #about-us {
-
 }
 #members {
-
 }
 #support-organization {
-
 }
 /* Content */
+body {
+  margin: 0px;
+}
 /* Banner */
 .banner {
-
+  background-image: url("images/Background_banner.jpg");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+}
+.banner-layout {
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  height: inherit;
+  justify-content: center;
+  margin-left: 28px;
 }
 h1 {
-
 }
 p {
-
+  width: 550px;
 }
 /* About us */
 /*  */
