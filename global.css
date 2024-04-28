@@ -1,3 +1,25 @@
+:root {
+  --bg-color: #292727;
+  --font-title: "Playfair Display";
+  --font-paragraph: "Montserrat";
+}
+
+a,
+h1,
+h2,
+h3 {
+  font-family: var(--font-title);
+  font-weight: 400;
+}
+h2 {
+  font-size: 44px;
+}
+
+p {
+  font-family: var(--font-paragraph);
+  font-size: 18px;
+}
+
 /* Navigation */
 .nav-container {
   margin: 0 auto;
@@ -8,105 +30,161 @@
   height: fit-content;
   background: white;
   opacity: 0.7;
-}
-.brand {
-  height: 100px !important;
-  margin-left: 28px;
-}
-nav {
-  display: flex;
-  align-items: center;
-  height: 100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-a {
-  margin-right: 24px;
-  text-decoration: none;
-  font-size: 22px;
-  &:hover {
-    color: red;
+  background-color: var(--bg-color);
+  .brand {
+    height: 80px !important;
+    margin-left: 28px;
+    place-self: center;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    a {
+      margin-right: 24px;
+      color: white;
+      text-decoration: none;
+      font-size: 22px;
+      &:hover {
+        color: red;
+      }
+      #about-us {
+      }
+      #members {
+      }
+      #support-organization {
+      }
+    }
   }
 }
-#about-us {
-}
-#members {
-}
-#support-organization {
-}
+
 /* Content */
 body {
   margin: 0px;
+  .banner {
+    background-image: url("images/Background_banner.jpg");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+  }
+  .banner-layout {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    height: inherit;
+    margin-top: 10%;
+    height: fit-content;
+    background-color: var(--bg-color);
+    color: white;
+    opacity: 0.8;
+    padding: 20px;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+    h1 {
+      font-size: xxx-large;
+      margin: 0;
+      width: fit-content;
+    }
+    p {
+      font-size: x-large;
+    }
+  }
 }
 /* Banner */
-.banner {
-  background-image: url("images/Background_banner.jpg");
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-}
-.banner-layout {
-  display: flex;
-  /* align-items: center; */
-  flex-direction: column;
-  height: inherit;
-  justify-content: center;
-  margin-left: 28px;
-}
-h1 {
-}
-.banner-describtion {
-  width: 33%;
-}
+
 /* About us */
+
+h2,
+h3,
+.about-us-describtion-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+.about-us-describtion-wrapper {
+  display: flex;
+  justify-content: center;
+  .about-us-describtion {
+    width: 70%;
+    line-height: 22px;
+  }
+}
 .lessons {
   display: flex;
   justify-content: center;
-}
-.lesson {
-  width: 30%;
-  padding: 12px;
-}
-h2,
-.about-us-describtion-wrapper {
-  width: 100%;
-  text-align: center;
-}
-.about-us-describtion-wrapper {
-  display: flex;
-  justify-content: center;
-}
-.about-us-describtion {
-  width: 40%;
-}
-.lesson-img {
-  width: 100%;
-}
-#lesson-paragraph {
-  width: 100%;
-  text-align: center;
+  .lesson {
+    width: 30%;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    .lesson-img {
+      width: 60%;
+      place-self: center;
+    }
+    #lesson-paragraph {
+      width: 100%;
+      text-align: center;
+    }
+  }
 }
 /* Motivation */
 .motivation-wrapper {
+  background-image: url(images/middle-background.JPG);
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-size: cover;
+  /* need be calculate -120px if overload is scrolling*/
+  background-position: 100% 50%;
+  color: white;
+  p {
+    font-size: 48px;
+  }
 }
+
+/* members */
+.members {
+  p {
+    line-height: 22px;
+  }
+}
+
 /* Footer */
 footer {
   display: flex;
-}
-.footer-cpmpany-wrapper,
-.footer-links-wrapper,
-.footer-founder-wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 33%;
-  padding: 3em;
-}
-.footer-cpmpany-wrapper {
-}
-.footer-links-wrapper {
-}
-.footer-founder-wrapper {
+  background-color: var(--bg-color);
+  img {
+    width: 30%;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      color: red;
+    }
+  }
+  .footer-cpmpany-wrapper,
+  .footer-links-wrapper,
+  .footer-founder-wrapper {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    padding: 3em;
+    h3 {
+      font-weight: 600;
+      text-align: start;
+    }
+  }
+  .footer-cpmpany-wrapper {
+  }
+  .footer-links-wrapper {
+  }
+  .footer-founder-wrapper {
+  }
 }
