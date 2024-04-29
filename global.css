@@ -179,6 +179,7 @@ h2 {
 footer {
   display: flex;
   background-color: var(--bg-color);
+  justify-content: center;
   img {
     width: 30%;
   }
