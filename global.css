@@ -124,8 +124,10 @@ h2 {
     display: flex;
     flex-direction: column;
     .lesson-img {
-      width: 60%;
+      margin-top: auto;
+      width: 80%;
       place-self: center;
+      border-radius: 14px;
     }
     #lesson-paragraph {
       width: 100%;
@@ -142,6 +144,7 @@ h2 {
   background-size: cover;
   /* need be calculate -120px if overload is scrolling*/
   background-position: 100% 50%;
+  padding: 80px;
   color: white;
   p {
     font-size: 48px;
@@ -157,23 +160,28 @@ h2 {
 
 /* Kontakt Map */
 .contact-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.contact-info {
+  flex: 1;
+  padding-left: 20px;
+  h2 {
+    text-align: start;
   }
-  
-  .contact-info {
-    flex: 1;
-    padding-left: 20px;
-  }
-  iframe {
-    flex: 3;
-    width: 60%;
-    height: 250px;
-    border-bottom-left-radius: 14px;
-    border-top-left-radius: 14px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.49);
-    box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.49);
+}
+iframe {
+  flex: 4;
+  width: 60%;
+  height: 250px;
+  border-bottom-left-radius: 14px;
+  border-top-left-radius: 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.49);
+  box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.49);
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 /* Footer */
 footer {
@@ -182,12 +190,15 @@ footer {
   justify-content: center;
   img {
     width: 30%;
+    border-radius: 100%;
+    border-radius: 100%;
+    padding-right: 12px;
   }
   a {
-    color: white;
+    color: red;
     text-decoration: none;
     &:hover {
-      color: red;
+      color: antiquewhite;
     }
   }
   .footer-cpmpany-wrapper,
@@ -195,12 +206,16 @@ footer {
   .footer-founder-wrapper {
     color: white;
     display: flex;
-    flex-direction: column;
     width: 33%;
     padding: 3em;
     h3 {
+      margin: 0;
       font-weight: 600;
       text-align: start;
+    }
+    a {
+      font-weight: 700;
+      font-size: larger;
     }
   }
   .footer-cpmpany-wrapper {
