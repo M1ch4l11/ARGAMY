@@ -3,41 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="style/global.css" />
+    <link rel="stylesheet" href="style/mobile.css" />
+    <link rel="stylesheet" href="style/menu.css" />
     <title>ARGAMY</title>
   </head>
   <body>
     <main>
       <!-- Main picture -->
-      <section class="banner">
+      <section id="banner" class="banner">
         <div class="nav-container">
-          <img src="images/brand.png" class="brand" />
-          <nav>
+          <div id="main-menu-container">
+            <a href="#banner"
+              ><img src="images/brand.png" class="brand" loading="lazy"
+            /></a>
+            <input class="checkbox" type="checkbox" id="menuCheck" />
+            <div class="hamburger-lines" onclick="openMenu()">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div>
+          </div>
+          <nav id="navigation-content">
             <a href="#about-us">O nás</a>
             <a href="#members">Členovia</a>
-            <a href="#support-organization">Podpora</a>
             <a href="#contact">Kontakt</a>
+            <a href="Galery_Custom.html">Galéria</a>
           </nav>
         </div>
         <div class="banner-layout">
           <h1>
-            V našej rodinnej firme kladieme dôraz na vzťahy <br />
+            V našej rodinnej farme kladieme dôraz na vzťahy
+            <br id="banner-title-line-break" />
             založené na úcte a harmónii medzi nami a našimi koňmi.
           </h1>
           <p class="banner-describtion">
-            Pri treningoch sa zameriavame na pokojny prístup a vzájomný respekt.
+            Pri treningoch sa zameriavame na pokojny prístup a vzájomný rešpekt.
+          </p>
+        </div>
+      </section>
+      <!-- Our horses -->
+      <section id="about-us">
+        <h2 class="global-title">Naše kone</h2>
+        <div class="about-us-describtion-wrapper">
+          <p class="about-us-describtion">
+            Na našej farme chováme tri anglické plnokrvníky, jedného írskeho
+            coba a jedného poľského ťažného koňa.
           </p>
         </div>
       </section>
       <!-- About Us -->
       <section id="about-us">
-        <h2>O nás</h2>
+        <h2 class="global-title">O nás</h2>
         <div class="about-us-describtion-wrapper">
           <p class="about-us-describtion">
             Pomáhať druhým, tak nás vychovávali a učili naši rodičia. Rodinny
             prístup ku klientom, ktorý sa nemusia obávať nedostatku empatie.
             Okrem rodinneho prístupu sme hrdí vlastníci 5 koní, ktorých sme
-            vychovali s láskou - dva z nich sú snami od žriebätka. Naše kone,
+            vychovali s láskou - tri z nich sú snami od žriebätka. Naše kone,
             vykazuju pokoj a vyrovnanosť, čím zabezpečujú stabilnú harmóniu
             nielen pri práci s nimi, ale aj pri poskytovaní služieb našim
             klientom.
@@ -48,47 +71,64 @@
             <img
               class="lesson-img"
               itemprop="image"
-              src="images/hipoterapia.JPG"
+              src="images/about_us/hipoterapia.jpg"
+              loading="lazy"
             />
-            <h3>Hipoterapia</h3>
+            <h3 class="global-title">Hipoterapia</h3>
             <p id="lesson-paragraph">
-              Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean
-              sollicitudin, alique.
+              Hipoterapia ponúka klientom širokú škálu prospešných účinkov
+              vrátane zlepšenia stability, flexibility a svalovej sily
+              prostredníctvom pohybu na koni. Okrem toho podporuje aj psychické
+              blaho, zvyšuje sebavedomie a pomáha zlepšovať koncentráciu a
+              komunikáciu.
             </p>
           </div>
           <div class="lesson">
-            <img class="lesson-img" src="images/zazitkove_fotenie.JPG" />
-            <h3>Zážitkové fotenie</h3>
+            <img
+              class="lesson-img"
+              src="images/about_us/zazitkove_fotenie.JPG"
+              loading="lazy"
+            />
+            <h3 class="global-title">Zážitkové fotenie</h3>
             <p id="lesson-paragraph">
-              Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean
-              sollicitudin, alique.
+              Zážitkové fotenie na koni v kostýmoch ponúka nezabudnuteľný
+              zážitok, kde klienti môžu prežiť fantáziu a históriu na chrbte
+              majestátneho koňa. Tento jedinečný zážitok nie len zdôrazňuje
+              eleganciu koní, ale aj umožňuje klientom prežiť autentický pocit
+              doby minulej.
             </p>
           </div>
           <div class="lesson">
-            <img class="lesson-img" src="images/zazitkove_akcie.JPG" />
-            <h3>Zážitkové akcie</h3>
+            <img
+              class="lesson-img"
+              src="images/about_us/zazitkove_akcie.JPG"
+              loading="lazy"
+            />
+            <h3 class="global-title">Zážitkové akcie</h3>
             <p id="lesson-paragraph">
-              Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean
-              sollicitudin, alique.
+              Zážitkové akcie ponúkajú klientom zažiť dobrodružstvo a spojiť sa
+              s prírodou prostredníctvom jazdy na krásnych a dobre vycvičených
+              koňoch. Tieto akcie sú vhodné pre všetky vekové skupiny a
+              poskytujú nezabudnuteľné zážitky a vzrušenie pre milovníkov koní a
+              dobrodružstva. S možnosťou uskutočnenia akcií u zákaznika.
             </p>
           </div>
         </div>
       </section>
       <!-- div with transparent background -->
-      <section class="motivation-wrapper">
-        <h1>"</h1>
-        <p>
-          “V očiach koní
-          <br />
-          nájdeš silnú energiu”
+      <section class="motivation-wrapper middle-art">
+        <p class="motivation-text">
+          “Vo výraze dieťaťa, koňa a anjela <br />
+          sa snúbia <br />
+          nevinnosť, sila a ochrana.”
         </p>
-        <h3>Janka Krošláková</h3>
+        <h4>Peter Vlčko</h4>
       </section>
       <!-- Clenovia -->
       <section id="members">
-        <h2>Členovia</h2>
+        <h2 class="global-title">Členovia</h2>
         <div class="about-us-describtion-wrapper">
-          <p class="about-us-describtion">
+          <p class="about-us-describtion members-description-wrapper">
             Postupom času nás láska doviedla k ľuďom s rovnakou víziou a vášňou,
             čo viedlo k založeniu organizácie na pomoc tým, ktorí to najviac
             potrebujú.
@@ -99,41 +139,85 @@
             <img
               class="lesson-img"
               itemprop="image"
-              src="images/zakladatel_prof.JPG"
+              src="images/members/zakladatel_prof.JPG"
               alt="group-lessons not found"
+              loading="lazy"
             />
-            <h3>Zakladateľ</h3>
-            <p id="lesson-paragraph">tel:</p>
+            <h3 class="global-title">Zakladateľ</h3>
+            <p id="contact-members-info" class="global-title">Peter Vlčko</p>
+            <p class="people-description">
+              Zakladateľ ARGAMY, ktorý má vyšší vek a strávil celý život
+              pracujúc so strojmi. No jeho vášeň pre kone a ich liečebný
+              potenciál ho priviedla k zalozeniu organizácie, ktorá pomáha
+              zlepšovať kvalitu života tým, ktorí to najviac potrebujú.
+            </p>
           </div>
           <div class="lesson">
             <img
               class="lesson-img"
-              src="images/janka.JPG"
+              src="images/members/janka.jpg"
               alt="Private-lessons not found"
+              loading="lazy"
             />
-            <h3>Inštruktorka</h3>
-            <p id="lesson-paragraph">tel:</p>
+            <h3 class="global-title">Licencovaný Hipoterapeut</h3>
+            <p id="contact-members-info" class="global-title">
+              Mgr. Janka Krošláková <br />
+              tel: 0911 950 988
+            </p>
+            <p class="people-description">
+              Hipoterapeutka, ktorej detský sen bol stať sa veterinárkou,
+              objavila novú cestu svojho života, keď ju neskôr zaviedla k
+              hipoterapii. Napriek tomu, že vyrastala v mestskom prostredí, jej
+              láska k prírode a zvieratám našla nový význam v terapeutickej
+              práci s koňmi.
+            </p>
           </div>
           <div class="lesson">
             <img
               class="lesson-img"
-              src="images/peter.JPG"
-              alt="Special-lessons not found"
+              src="images/members/miska.jpeg"
+              alt="Private-lessons not found"
+              loading="lazy"
             />
-            <h3>Správca areálu</h3>
-            <p id="lesson-paragraph">tel:</p>
+            <h3 class="global-title">Licencovaný Hipoterapeut</h3>
+            <p id="contact-members-info" class="global-title">
+              Mgr. et. Bc. Michaela Chudá
+            </p>
+            <p class="people-description">
+              Hipoterapeutka, pôsobiaca v nemocnici ako zdravotná sestra, našla
+              v práci s koňmi nový spôsob, ako pomáhať ľuďom a zároveň spojiť
+              svoju vášeň s pomocou ostatným, ktoré prinášajú úľavu a novú nádej
+              pacientom prostredníctvom terapeutickej sily koní.
+            </p>
+          </div>
+          <div class="lesson">
+            <img
+              class="lesson-img"
+              src="images/members/peter.jpg"
+              alt="Special-lessons not found"
+              loading="lazy"
+            />
+            <h3 class="global-title">Správca areálu</h3>
+            <p id="contact-members-info" class="global-title">
+              Ing. Peter Krošlák
+            </p>
+            <p class="people-description">
+              Potravinársky technológ našiel nový zmysel svojho života v láske
+              ku koňom, čo mu v konečnom dôsledku zachránilo život. Jeho
+              oddanosť práci a vášeň pre kone pretavili starý areál na miesto
+              plné života, lásky k prírode a priestor pre ľudí s rôznymi
+              výzvami.
+            </p>
           </div>
         </div>
       </section>
       <section class="motivation-wrapper">
-        <!-- <img src="images/middle-background.JPG" alt="" /> -->
-        <h1>"</h1>
-        <p>
+        <p class="motivation-text">
           “V očiach koní
           <br />
           nájdeš silnú energiu”
         </p>
-        <h3>Janka Krošláková</h3>
+        <h4>Janka Krošláková</h4>
       </section>
       <!-- kontakt google maps -->
       <section class="contact-container">
@@ -146,7 +230,7 @@
 
           <p>
             <strong>Telefón:</strong><br />
-            0911 951 567
+            0911 950 988
           </p>
 
           <p>
@@ -183,17 +267,17 @@
       </section> -->
       <section class="footer-founder-wrapper">
         <!-- Hlavny veduci + adresa a kontakt, moto veduceho -->
-        <img src="images/zakladatel_prof.JPG" />
+        <img src="images/members/zakladatel_prof.JPG" />
         <div>
           <h3>Zakladateľ</h3>
           <p>
             Zmena kroku a uzdravenie srdca. <br />
             Spolu s hipoterapiou dosiahneme ciele a prekonáme prekážky krok za
-            krokom. <br />
-            <a href="">ziskat kontakt</a>
+            krokom.
           </p>
         </div>
       </section>
     </footer>
+    <script src="JS/index.js"></script>
   </body>
 </html>

@@ -1,0 +1,94 @@
+@media screen and (max-width: 600px) {
+  .banner {
+    flex-direction: column;
+    justify-content: space-between;
+    .nav-container {
+      width: 100% !important;
+      flex-direction: column;
+      position: relative;
+      opacity: 0.8;
+      #main-menu-container {
+        display: flex;
+        .hamburger-lines,
+        #menuCheck {
+          display: flex;
+        }
+        .brand {
+          height: 90px !important;
+        }
+      }
+      #navigation-content {
+        height: fit-content;
+        flex-direction: column;
+        margin-left: 3em;
+        height: 0;
+        align-items: baseline;
+        transition: 0.5s;
+        a {
+          display: none;
+        }
+      }
+    }
+  }
+  .banner-layout {
+    border-radius: 0 !important;
+    h1 {
+      font-size: x-large !important;
+      #banner-title-line-break {
+        display: none;
+      }
+    }
+    p {
+      font-size: large !important;
+    }
+  }
+  .about-us-describtion {
+    text-align: justify;
+    width: 84% !important;
+  }
+  .middle-art {
+    background-position: 60% 28%;
+  }
+
+  .lessons {
+    flex-direction: column;
+    .lesson {
+      width: 100%;
+      align-items: center;
+      padding: 0;
+      #lesson-paragraph,
+      .lesson-img,
+      .people-description {
+        width: 84% !important;
+      }
+    }
+  }
+
+  .members-description-wrapper {
+    width: 84% !important;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    .contact-info {
+      padding: 0 !important;
+    }
+    iframe {
+      flex: 1;
+      width: 100%;
+      border: none !important;
+      border-radius: 0;
+    }
+  }
+  footer {
+    flex-direction: column;
+    .footer-cpmpany-wrapper {
+      width: 90% !important;
+      padding: 2em;
+      padding-right: 0;
+    }
+    .footer-founder-wrapper {
+      display: none;
+    }
+  }
+}

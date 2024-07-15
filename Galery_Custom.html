@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Bakery Navigation with Lazy Loading</title>
+    <link rel="stylesheet" href="/style/global.css" />
+    <link rel="stylesheet" href="/style/gallery.css" />
+    <link rel="stylesheet" href="/style/mobile.css" />
+    <link rel="stylesheet" href="/style/menu.css" />
+    <link rel="stylesheet" href="/style/gallery-nav.css" />
+  </head>
+  <style></style>
+  <body>
+    <section id="banner" class="banner">
+      <div class="nav-container">
+        <div id="main-menu-container">
+          <a href="index.html#banner"
+            ><img src="images/brand.png" class="brand" loading="lazy"
+          /></a>
+          <input class="checkbox" type="checkbox" id="menuCheck" />
+          <div class="hamburger-lines" onclick="openMenu()">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+        </div>
+        <nav id="navigation-content">
+          <a href="index.html#about-us">O nás</a>
+          <a href="index.html#members">Členovia</a>
+          <a href="index.html#contact">Kontakt</a>
+          <a href="Galery_Custom.html">Galéria</a>
+        </nav>
+      </div>
+    </section>
+
+    <ul class="nav">
+      <li><a href="#" data-content="nase-kone">Naše kone</a></li>
+      <li><a href="#" data-content="akcia-v-skolke">Akcia v školke</a></li>
+      <li><a href="#" data-content="skolka-na-farme">Škôlka na farme</a></li>
+      <li><a href="#" data-content="cas-na-farme">Čas na farme</a></li>
+    </ul>
+
+    <!-- galery content -->
+    <div class="gallery-container gallery" id="content">
+      <p>Vyberte si kategoriu.</p>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modal-img" />
+      <div id="caption"></div>
+    </div>
+    <script src="JS/index.js"></script>
+    <script src="JS/galery-data.js"></script>
+    <script src="JS/galeryCustom.js"></script>
+  </body>
+</html>
